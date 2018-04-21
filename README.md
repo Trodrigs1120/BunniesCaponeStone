@@ -6,15 +6,15 @@ Grecipe is an all-in-one grocerystore/cookbook that allows users to buy everyday
 
   Team Members..
 
-Desmon Stanford- React: Component Functionality + connectivity
+Desmon Stanford- React: Component Functionality + Connectivity
 
 Adam Troy- React: Style + Component Design
 
 Taylor Bennet- React: Style + Component Design
 
-Taylor Rodrigs- Backend Design + Database
+Taylor Rodrigs- Backend: Design + Database
 
-Tyler Hunter - Backend - Routes, Server, API calls
+Tyler Hunter - Backend: Routes, Server, API calls
 
   API..
 
@@ -27,5 +27,9 @@ Edamam - Loads recipes based on the food items queried
 Data Model..
 
 Grocery Information: Name, Price, Quantity, Eaten(boolean true or false), shelf life
+
+Project Overview.. 
+
+https://files.slack.com/files-pri/T7S7N5WC8-FABUK5RRD/download/group_pdf.docx
 
 
