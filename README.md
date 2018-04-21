@@ -21,5 +21,11 @@ Tyler Hunter - Backend - Routes, Server, API calls
 Edamam - Loads recipes based on the food items queried 
 
   StoryBoard..
+  
+  https://files.slack.com/files-tmb/T7S7N5WC8-FAAL74T60-b21738e6ea/image_uploaded_from_ios_1024.jpg
+
+Data Model..
+
+Grocery Information: Name, Price, Quantity, Eaten(boolean true or false), shelf life
 
 
