@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 25px 5%;
+}
+
+.row, .column {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.split {
+  justify-content: space-between;
+}
+
+.y-center {
+  align-items: center;
+}
+
+header {
+  background: #444;
+  color: #fff;
+  padding: 7px 5%;
+}
+
+form {
+  width: 350px;
+  margin-bottom: 15px;
+}
+
+form input, form button {
+  padding: 6px;
+  font-size: 1.00001rem;
+}
