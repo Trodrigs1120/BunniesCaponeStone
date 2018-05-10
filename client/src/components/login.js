@@ -11,7 +11,8 @@ class Login extends Component {
         email: '',
         password: '',
         zipcode:'',
-        logged_in: false
+        logged_in: false,
+        id:''
       }
     }
   
@@ -34,7 +35,7 @@ class Login extends Component {
         zipcode: this.state.zipcode
       }).then(({ data }) => {
         console.log(data)
-        this.setState({name: data.user.name, logged_in: true});
+        this.setState({name: data.user.name, logged_in: true,id:data.user._id});
       }); 
     }
   
@@ -46,18 +47,45 @@ class Login extends Component {
       axios.get('/isauth')
         .then(({data}) => {
           if ( data.user )
-            this.setState({name: data.user.email, logged_in: true});
+            this.setState({name: data.user.email, logged_in: true, id:data.user._id});
         }).catch(err => console.log(err));
     }
-  
+
+//change purchases array, its a placeholder
+    createReceipt(){
+      axios.post('/createreceipt', {
+        owner: this.state.id,
+        // insert the purchases into this value
+        purchases: ["1","2"],
+        date: Date.now(),
+        total: 12.50,
+      }).then(({ data }) => {
+        console.log(data);
+      });
+    }
+    checkReceipt(){
+      axios.get('/checkreceipts')
+      .then(({ data }) => {
+        
+      });
+      
+    }
+  //The login state check is where we'll store the more important page data.
     render() {
       return (
         <div>
           
-  
+
           <div className="container">
             {this.state.logged_in ? (
+              <div>  
               <h1>Logged in!</h1>
+              
+              <p>{this.state.id}</p>
+              <button onClick={(e)=> this.createReceipt()}>create receipt click me </button>
+              <button onClick={(e)=> this.checkReceipt()}>Search Receipts </button>
+              </div>
+              
             ) : (
               <div>
                 <h2>Register</h2>

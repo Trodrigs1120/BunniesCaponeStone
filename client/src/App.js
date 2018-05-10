@@ -12,41 +12,20 @@ class App extends Component {
       email: '',
       password: '',
       zipcode:'',
-      logged_in: false
+      logged_in: false,
+      id:'',
     }
   }
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  }
-
-  loginOrRegister(is_login, e) {
-    e.preventDefault();
-
-    let route = is_login ? '/login' : '/register';
-
-    axios.post(route, {
-      email: this.state.email,
-      password: this.state.password,
-      name: this.state.name,
-      zipcode: this.state.zipcode
-    }).then(({ data }) => {
-      console.log(data)
-      this.setState({name: data.user.email, logged_in: true});
-    }); 
-  }
-
-  componentDidMount = () => {
-    this.isAuthenticated();
-  }  
 
   isAuthenticated() {
     axios.get('/isauth')
       .then(({data}) => {
         if ( data.user )
-          this.setState({name: data.user.email, logged_in: true});
+        //where the logged in status change occurs
+        // adding a line to set the identifier
+          this.setState({name: data.user.email, logged_in: true, id:data.user._id});
+        
       }).catch(err => console.log(err));
   }
 

@@ -1,0 +1,11 @@
+{ 
+    "_id" : ObjectId("5ad2567e0507bda4ad4f3d15"), 
+    "Purchaseid" : NumberInt(1), 
+    "itemspurchased" : [
+        NumberInt(1), 
+        NumberInt(3), 
+        NumberInt(4)
+    ], 
+    "date" : "4/14/2018", 
+    "total" : 20.52
+}

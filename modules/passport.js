@@ -9,7 +9,7 @@ passport.use(new LocalStrategy({
     .then(user => {
       if ( !user ) return cb(null, false);
       if ( user.password != password ) return cb(null, false);
-
+      // need to include something to catch an error
       return cb(null, user);
     });
 }));
